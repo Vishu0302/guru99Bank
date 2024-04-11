@@ -40,7 +40,6 @@ public class LoginTest_TC002DDT extends BaseClass{
 			Thread.sleep(3000);
 			driver.switchTo().alert().accept();//close logout alert
 			driver.switchTo().defaultContent();
-			
 		}
 	}
 	
@@ -63,16 +62,16 @@ public class LoginTest_TC002DDT extends BaseClass{
 	{
 		String path=System.getProperty("user.dir")+"/src/test/java/com/guru99Bank/testData/LoginData.xlsx";
 		
-		int rownum=com.guru99Bank.utilities.XLUtils.rowCount(path, "Sheet1");
-		int colcount=com.guru99Bank.utilities.XLUtils.cellCount(path,"Sheet1",1);
+		int rownum = com.guru99Bank.utilities.XLUtils.rowCount(path, "Sheet1");
+		int colcount = com.guru99Bank.utilities.XLUtils.cellCount(path,"Sheet1",1);
 		
-		String logindata[][]=new String[rownum][colcount];
+		String logindata[][] = new String[rownum][colcount];
 		
 		for(int i=1;i<=rownum;i++)
 		{
 			for(int j=0;j<colcount;j++)
 			{
-				logindata[i-1][j]=com.guru99Bank.utilities.XLUtils.getCellData(path,"Sheet1", i,j);//1 0
+				logindata[i-1][j] = com.guru99Bank.utilities.XLUtils.getCellData(path,"Sheet1", i,j);//1 0
 			}
 				
 		}
