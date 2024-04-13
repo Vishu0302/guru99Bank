@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Guru99Bank" class="navigator-link">
-              <span class="suite-name border-passed">Guru99Bank</span>
+              <span class="suite-name border-failed">Guru99Bank</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 3 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Guru99Bank" class="hide-methods failed suite-Guru99Bank"> (hide)</a> <!-- hide-methods failed suite-Guru99Bank -->
+                      <a href="#" panel-name="suite-Guru99Bank" class="show-methods failed suite-Guru99Bank"> (show)</a> <!-- show-methods failed suite-Guru99Bank -->
+                    </span>
+                    <div class="method-list-content failed suite-Guru99Bank">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Guru99Bank" title="com.guru99Bank.testCases.LoginTest_TC002DDT" class="method navigator-link" hash-for-method="loginTestDDT(mngr112909, tytUreg)">loginTestDDT(mngr112909, tytUreg)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Guru99Bank" title="com.guru99Bank.testCases.LoginTest_TC002DDT" class="method navigator-link" hash-for-method="loginTestDDT(mngr137319, bAdYvyb)">loginTestDDT(mngr137319, bAdYvyb)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Guru99Bank" title="com.guru99Bank.testCases.LoginTest_TC002DDT" class="method navigator-link" hash-for-method="loginTestDDT(mngr164225, jahetAp)">loginTestDDT(mngr164225, jahetAp)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Guru99Bank -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +129,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Guru99Bank" title="com.guru99Bank.testCases.LoginTest_TC001" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Guru99Bank" title="com.guru99Bank.testCases.LoginTest_TC002DDT" class="method navigator-link" hash-for-method="loginTestDDT(mngr564869, dYrezYh)">loginTestDDT(mngr564869, dYrezYh)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Guru99Bank -->
@@ -119,6 +148,69 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Guru99Bank" class="panel Guru99Bank">
+          <div class="suite-Guru99Bank-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.guru99Bank.testCases.LoginTest_TC002DDT</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTestDDT(mngr112909, tytUreg)">
+                  </a> <!-- loginTestDDT(mngr112909, tytUreg) -->
+                  <span class="method-name">loginTestDDT</span>
+                  <span class="parameters">(mngr112909, tytUreg)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.guru99Bank.testCases.LoginTest_TC002DDT.loginTestDDT(LoginTest_TC002DDT.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTestDDT(mngr137319, bAdYvyb)">
+                  </a> <!-- loginTestDDT(mngr137319, bAdYvyb) -->
+                  <span class="method-name">loginTestDDT</span>
+                  <span class="parameters">(mngr137319, bAdYvyb)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.guru99Bank.testCases.LoginTest_TC002DDT.loginTestDDT(LoginTest_TC002DDT.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTestDDT(mngr164225, jahetAp)">
+                  </a> <!-- loginTestDDT(mngr164225, jahetAp) -->
+                  <span class="method-name">loginTestDDT</span>
+                  <span class="parameters">(mngr164225, jahetAp)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.guru99Bank.testCases.LoginTest_TC002DDT.loginTestDDT(LoginTest_TC002DDT.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Guru99Bank-class-failed -->
+          <div class="suite-Guru99Bank-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.guru99Bank.testCases.LoginTest_TC002DDT</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTestDDT(mngr564869, dYrezYh)">
+                  </a> <!-- loginTestDDT(mngr564869, dYrezYh) -->
+                  <span class="method-name">loginTestDDT</span>
+                  <span class="parameters">(mngr564869, dYrezYh)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Guru99Bank-class-passed -->
           <div class="suite-Guru99Bank-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -148,6 +240,7 @@
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.guru99Bank.testCases.LoginTest_TC001&quot;/&gt;
+      &lt;class name=&quot;com.guru99Bank.testCases.LoginTest_TC002DDT&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- BankingApp Test --&gt;
 &lt;/suite&gt; &lt;!-- Guru99Bank --&gt;
@@ -161,7 +254,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">BankingApp Test (1 class)</span>
+                <span class="test-name">BankingApp Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,16 +280,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginTest')
-data.setCell(0, 2, 'com.guru99Bank.testCases.LoginTest_TC001')
-data.setCell(0, 3, 1934);
+data.setCell(0, 1, 'loginTestDDT')
+data.setCell(0, 2, 'com.guru99Bank.testCases.LoginTest_TC002DDT')
+data.setCell(0, 3, 9956);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginTestDDT')
+data.setCell(1, 2, 'com.guru99Bank.testCases.LoginTest_TC002DDT')
+data.setCell(1, 3, 5631);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginTestDDT')
+data.setCell(2, 2, 'com.guru99Bank.testCases.LoginTest_TC002DDT')
+data.setCell(2, 3, 5263);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginTestDDT')
+data.setCell(3, 2, 'com.guru99Bank.testCases.LoginTest_TC002DDT')
+data.setCell(3, 3, 5192);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginTest')
+data.setCell(4, 2, 'com.guru99Bank.testCases.LoginTest_TC001')
+data.setCell(4, 3, 1593);
 window.suiteTableData['Guru99Bank']= { tableData: data, tableDiv: 'times-div-Guru99Bank'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Guru99Bank">
               </div> <!-- times-div-Guru99Bank -->
             </div> <!-- times-div -->
@@ -229,11 +338,44 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">6178 ms</span>
+                <span class="method-start">5652 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8116 ms</span>
+                <span class="method-start">7249 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.guru99Bank.testCases.LoginTest_TC002DDT</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">7398 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTestDDT(mngr137319, bAdYvyb)</span>
+                <span class="method-start">12865 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTestDDT(mngr164225, jahetAp)</span>
+                <span class="method-start">18499 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginTestDDT(mngr564869, dYrezYh)</span>
+                <span class="method-start">23693 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTestDDT(mngr112909, tytUreg)</span>
+                <span class="method-start">33650 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">38915 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

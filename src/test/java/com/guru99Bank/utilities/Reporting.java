@@ -68,7 +68,7 @@ public class Reporting extends TestListenerAdapter{
 	}
 	public void onFinish(ITestContext testContext)
 	{
-//		extent.flush();
+		extent.flush();
 	}
 
 }

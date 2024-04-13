@@ -11,7 +11,7 @@
 		<parameter name="browser" value="chrome"/>
 		<classes>
 		<class name="com.guru99Bank.testCases.LoginTest_TC001" /> 
-		<!-- 	<class name="com.guru99Bank.testCases.LoginTest_TC002DDT" /> -->
+		<class name="com.guru99Bank.testCases.LoginTest_TC002DDT" />
 		</classes>
 
 	</test>
