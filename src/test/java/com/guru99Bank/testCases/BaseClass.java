@@ -50,12 +50,9 @@ public class BaseClass {
 		{
 			driver = new EdgeDriver();
 		}
-		else
-		{
-			System.out.println("No Specific Browser is defined. Opening in chrome by default");
-			driver = new ChromeDriver();
-		}
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
 		driver.get(baseURL);
 	}
 	

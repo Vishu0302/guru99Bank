@@ -17,30 +17,43 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class Reporting extends TestListenerAdapter{
+public class Reporting2 extends TestListenerAdapter{
 	
 	public ExtentSparkReporter htmlReporter;
 	public ExtentReports extent;
 	public ExtentTest logger;
+	
+	public ExtentSparkReporter spark;
 	
 	public void onstart(ITestContext testContext) throws Exception
 	{
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		String repName = "Test Report - " + timeStamp + ".html";
 		
-		htmlReporter = new ExtentSparkReporter(System.setProperty("user.dir", repName) + "\\test-output\\"+ repName);
-		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
+//		htmlReporter = new ExtentSparkReporter(System.setProperty("user.dir", repName) + "\\test-output\\"+ repName);
+//		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
 		
 		extent = new ExtentReports();
 		
-		extent.attachReporter(htmlReporter);
-		extent.setSystemInfo("Hostname", "localhost");
-		extent.setSystemInfo("Environment", "QA");
-		extent.setSystemInfo("Name", "Vishal");
+		spark = new ExtentSparkReporter(System.getProperty("user.dir") + repName + "/test-output/STMExtentReport.html");
+		spark.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
+		extent.attachReporter(spark);
 		
-		htmlReporter.config().setDocumentTitle("Guru99 Bank Project");
-		htmlReporter.config().setReportName("Functional Automation Report");
-		htmlReporter.config().setTheme(Theme.DARK);
+		extent.setSystemInfo("Host Name", "Localhost");
+        extent.setSystemInfo("Environment", "QA");
+        extent.setSystemInfo("User Name", "Vishal");
+        spark.config().setDocumentTitle("Guru99 Bank Project");
+        spark.config().setReportName("Functional Automation Report");
+        spark.config().setTheme(Theme.DARK);
+		
+//		extent.attachReporter(htmlReporter);
+//		extent.setSystemInfo("Hostname", "localhost");
+//		extent.setSystemInfo("Environment", "QA");
+//		extent.setSystemInfo("Name", "Vishal");
+//		
+//		htmlReporter.config().setDocumentTitle("Guru99 Bank Project");
+//		htmlReporter.config().setReportName("Functional Automation Report");
+//		htmlReporter.config().setTheme(Theme.DARK);
 		
 	}
 	public void onSucccess(ITestResult tr)
@@ -52,6 +65,9 @@ public class Reporting extends TestListenerAdapter{
 	{
 		logger = extent.createTest(tr.getName());
 		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED));
+		
+		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName() + " - Test Case Failed", ExtentColor.RED));
+		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 		
 		String Screenshotpath = System.getProperty(("user.dir") + "\\Screenshots\\"+ tr.getName()+ ".jpg");
 		
@@ -68,7 +84,7 @@ public class Reporting extends TestListenerAdapter{
 	}
 	public void onFinish(ITestContext testContext)
 	{
-//		extent.flush();
+		extent.flush();
 	}
 
 }

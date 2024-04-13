@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
+<!--<suite name="Guru99Bank" parallel = "tests" thread-count = "3"> -->
 <suite name="Guru99Bank">
-
 	<!-- <listeners>
 		<listener class-name="com.guru99Bank.utilities.Reporting"/>
-	</listeners>-->
+	</listeners> -->
+	
+	<!-- <listeners>
+		<listener class-name="com.guru99Bank.utilities.Reporting2"/>
+	</listeners> -->
 
-	<test name="BankingApp Test">
+	<test name="BankingApp Test on Chrome">
 		<parameter name="browser" value="chrome"/>
 		<classes>
 		<class name="com.guru99Bank.testCases.LoginTest_TC001" /> 
@@ -15,5 +19,21 @@
 		</classes>
 
 	</test>
+<!-- 	<test name="BankingApp Test on Edge">
+		<parameter name="browser" value="edge"/>
+		<classes>
+		<class name="com.guru99Bank.testCases.LoginTest_TC001" /> 
+		<class name="com.guru99Bank.testCases.LoginTest_TC002DDT" />
+		</classes>
+
+	</test>
+	<test name="BankingApp Test on Firefox">
+		<parameter name="browser" value="firefox"/>
+		<classes>
+		<class name="com.guru99Bank.testCases.LoginTest_TC001" /> 
+		<class name="com.guru99Bank.testCases.LoginTest_TC002DDT" />
+		</classes>
+
+	</test> -->
 
 </suite>
